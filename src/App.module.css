@@ -1,0 +1,22 @@
+.wrapper {
+  width: 100%;
+  max-width: 46rem;
+  margin: -1.6875rem auto 2rem auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  .wrapper {
+    padding: 0 1rem;
+  }
+}
+

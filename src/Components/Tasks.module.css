@@ -1,0 +1,204 @@
+.formBox {
+  width: 736px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.taskText {
+  width: 100%;
+  height: 54px;
+
+  flex: 1;
+  
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+
+  color: var(--gray-100);
+  padding: 1rem;
+}
+
+.taskText:focus {
+  border: 1px solid var(--purple-dark);
+  outline: none;
+}
+
+.taskText::placeholder {
+  color: var(--gray-300);
+}
+
+.button {
+  width: 5.625rem;
+  height: 52px;
+
+  background-color: var(--blue-dark);
+  color: var(--gray-100);
+  font-weight: bold;
+
+  border-radius: 8px;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  transition: background-color 0.1s ease;
+
+  cursor: pointer;
+
+}
+
+.button:not(:disabled):hover {
+  background-color: var(--blue);
+}
+
+.button:disabled {
+  opacity: 0.6;
+}
+
+.icon {
+  color: var(--gray-100);
+}
+
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4.0625rem;
+}
+
+.header p {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--blue);
+}
+
+header span {
+  margin-left: 0.5rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 999px;
+
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+}
+
+.noTasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  border-top: 1px solid var(--gray-400);
+
+  margin: 1.5rem 0 0 0;
+  padding: 4rem 0 4rem 0;
+}
+
+.noTasks strong {
+  margin-top: 1.5rem;
+}
+
+.main {
+  margin-top: 1.5rem;
+} 
+
+.singleTask {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem;
+
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+
+  margin-bottom: 0.75rem;
+
+  height: 72px;
+}
+
+.checkboxStyled {
+  background: transparent;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  height: 24px;
+  min-width: 24px;
+
+  cursor: pointer;
+}
+
+.checkboxStyled:hover {
+  background: rgba(30, 111, 159, 0.2);
+}
+
+.checkboxStyled:focus {
+  outline: none;
+  box-shadow: 0 0 0 0;
+}
+
+button[data-state=checked] {
+  background: var(--purple-dark);
+  border-color: var(--purple-dark);
+  height: 24px;
+}
+
+button[data-state=checked]:hover{
+  background: var(--purple);
+  border-color: var(--purple);
+  height: 24px;
+}
+
+.checkIcon {
+  color: var(--gray-100);
+}
+
+button[data-state=checked] + label  {
+  text-decoration: line-through;
+}
+
+button[role=checkbox] + label {
+  width: 100%;
+  cursor: pointer;
+}
+
+.deleteButton {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: var(--gray-300);
+  cursor: pointer;
+
+  padding: 3px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.deleteButton:hover {
+  background: var(--gray-400);
+  color: var(--danger);
+}
+
+
+@media (max-width: 1024px) {
+  .formBox {
+    width: calc(100vw - 2rem);
+    flex-direction: column;
+  }
+  .button {
+    width: calc(100vw - 2rem);
+    height: 40px;
+  }
+}
